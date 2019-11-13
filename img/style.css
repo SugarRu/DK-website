@@ -1,0 +1,532 @@
+@font-face {
+  font-family: 'GOST type A Regular';
+  src: url('../fonts/GOST_type_A.eot');
+  src: url('../fonts/GOST_type_A.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/GOST_type_A.woff') format('woff'),
+  url('../fonts/GOST_type_A.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,html {
+  font-family: 'GOST type A Regular', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+.container {
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#main {
+  width: 100%;  
+  background-image: url('/img/main/landing4.png');
+  background-repeat: no-repeat; /* уберет повторение и прижмет картинку к левой части в полное её размере */
+  background-size: cover; /* растянуть картинку на всю ширину */
+}
+#main .container {
+  height: 1010px; /* высоту надо сделать адаптивной*/
+}
+a {
+  color: inherit; /* берёт парамерты РОДИТЕЛЯ (который ДОЛЖЕН быть задан родителю */
+}
+ul  {
+  padding: 0; /* убрать отсутпы, которые есть */
+  margin: 0;/* убрать отсутпы, которые есть */
+  list-style: none; /* убрать точки */
+}
+.header {  
+  display: flex;
+  justify-content: space-between;
+}
+.header .nav {
+  height: 100%;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.header .nav ul {
+  display: flex;
+  align-items: center;
+}
+.header .nav li {
+  width: 133px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.header .nav a {
+  text-decoration: none;
+  font-weight: 700;
+  
+}
+.logo img{
+  width: 300px;
+  margin-top: 26px;
+}
+.main {
+  height: calc(100% - 180px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main__social a {
+  width: 60px;
+  height: 60px; 
+  border-radius: 60px;
+  border: 1px solid rgb(255,255,255);
+  margin-bottom: 25px;
+  display: block;
+  
+
+}
+.main__social a span { /* задается чтобы было верное отображение в некоторых браузерах (дополнительно к .social a) */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.main__left .text{
+  display: block;
+  transform: rotate(-180deg);
+  position: relative;
+  left: 0px;
+  writing-mode: vertical-rl;
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+.main__center {
+  text-align: center;
+  
+}
+.main__title {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  letter-spacing: 8px;
+
+}
+.main__subtitle {
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: -20px;
+  letter-spacing: 15px;
+}
+.main__button {
+  margin-top: 70px;
+  font-size: 30px;
+  text-decoration: none;
+  
+}
+.btn__reserv {
+  text-decoration: none;
+  padding: 5px;
+  border-right: 1px solid;  
+  border-bottom: 1px solid;
+}
+.btn__events {
+  margin-left: 50px;
+  text-decoration: none;
+  padding: 5px;  
+  border-left: 1px solid;
+  border-top: 1px solid
+}
+
+/* можно задать ксс классы цветов и подключать их 
+.color-white {
+  color: #fff;
+}
+*/
+
+
+
+.glitch:before, .glitch:after {
+  content:'место незабываемых встреч';
+  text-transform: uppercase;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  padding: 30px;
+}
+.glitch:before {
+  left:3px;
+  text-shadow: -3px 0 red;
+  animation: glitch-before 2s linear 0s infinite alternate;
+}
+.glitch:after {
+  left:-3px;
+  text-shadow: -3px 0 blue;
+  animation: glitch-after 2s linear 0s infinite alternate;
+}
+
+
+
+@keyframes glitch-before {
+  $steps: 20;
+  @for $i from 0 through $steps {
+     #{percentage($i*(1/$steps))} {
+        clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+     }
+  }
+}
+
+@keyframes glitch-after {
+  $steps: 20;
+  @for $i from 0 through $steps {
+     #{percentage($i*(1/$steps))} {
+        clip: rect(random(150)+px, 350px, random(150)+px, 30px)
+     }
+  }
+}
+View Compiled 
+
+
+Resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body { */
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  color: #1ab64e;
+  font-weight: 700;
+  background-color: rgb(0, 0, 0);  
+  
+}
+
+.navbar {
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);  
+  
+}
+
+.navbar a {
+  animation: flow 2s ease-in-out infinite;
+  background: linear-gradient(-60deg, #d0db39, #9be08d);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-inner {
+  background-image: url('/img/main/landing2.png');
+}
+
+.caption {
+  width: 100%;
+  min-width: 100%;
+  position: absolute;
+  top: 40%;
+  z-index: 1;  
+}
+
+.caption h3 { /* заголовок на главной */
+  color: rgb(255, 255, 255);
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+
+  animation: flow 20s ease-in-out infinite;
+  background: linear-gradient(-60deg, #05b4e0, #4e956b, #c2e20e, #f03c05);
+  background-size: 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.caption-block {
+  width: 10000px;
+  height: 50px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  margin-top: -170px;
+  margin-left: 400px;
+  z-index: -1;
+  
+}
+.caption-block-secondary{
+  width: 2000px;
+  height: 50px;
+  background-color: rgb(39, 36, 36);
+  position: absolute;
+  margin-top: -90px;
+  margin-left: -400px;
+  z-index: -1;
+  
+}
+
+
+.btn {
+  border-width: medium;
+  text-transform: uppercase;
+  
+  
+  
+}
+
+h3.heading {
+  text-align: center;
+  font-size: 1.9rem;
+  text-transform: uppercase;
+  margin-bottom: 1.9rem;
+  font-weight: 700;
+}
+
+.padding {
+  padding: 2rem 0;
+}
+
+img.photos {
+  min-width: 100%;
+
+}
+
+.no-padding .col-md-4 {
+  padding: 0;
+}
+
+.card {
+  margin: 2rem;
+  
+}
+
+.footer .row {
+  background-color: rgb(204, 219, 219);
+  
+}
+
+
+
+
+
+
+.landing {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: table;
+  background: #E9ECEF;
+  z-index: -1;
+}
+
+.home-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-inner {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap&subset=cyrillic,cyrillic-ext"
+rel="stylesheet">
+
+
+
+<!-- Навигация -->
+  <nav class="navbar navbar-expand-md sticky-top navbar-dark">
+    <!-- Brand -->
+    <a class="navbar-brand" href="/">
+      <img src="img/logo.png" alt="Logo" style="width:80px;">
+    </a>
+
+    <!-- Toggler/collapsibe Button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#about">О нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#menu">Меню</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#reserv">Резервирование</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#fotos">Фотоотчеты</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#vac">Вакансии</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Start Landing Page -->
+  <div class="landing">
+    <div class="home-wrap">
+      <div class="home-inner">
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Landing Page Caption -->
+  <div class="caption center-block text-center">
+    <h3>Добро пожаловать</h3>
+    <h3>в эру новой культуры</h3>
+    <div class="caption-block"></div>
+    <div class="caption-block-secondary"></div>
+   <!--  <a class="btn btn-outline-light" href="#about">Прикоснуться</a> -->
+  </div>
+  <!-- /.caption center-block text-center -->
+  </div>
+  <!-- /.landing -->
+
+  <!-- Start About Section -->
+  <div id="about">
+    <div class="jumbotron">
+      <h3 class="heading">О нас</h3>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <h4>Артем Хан</h4>
+          <p>
+            ▪️#МирГлазамиКорейца <br>
+            ▪️Живу на Сахалине <br>
+            ▪️Иногда Путешествую <br>
+            ▪️Архитектор - Сетевик <br>
+            ▪️создаю сеть, строю бизнес <br>
+            ▪️ @domkultury.ys <br>
+            ▪️Связь со мной👇🏼 <br>
+            taplink.cc/tema_han</p> <br>
+
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="/img/main/maestro.png" alt="">
+        </div>
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.jumbotron -->
+
+  </div>
+  <!-- /#about -->
+
+  <!-- Start Photos Section -->
+  <div id="photos">
+    <div class="container-fluid padding">
+      <h3 class="heading">Фотоотчеты</h3>
+      <div class="row no-padding">
+        <div class="col-md-4"><img class="photos" src="/img/main/photo.png" alt=""></div>
+        <div class="col-md-4"><img class="photos" src="/img/main/photo.png" alt=""></div>
+        <div class="col-md-4"><img class="photos" src="/img/main/photo.png" alt=""></div>
+      </div>
+      <!-- /.row no-padding -->
+
+    </div>
+    <!-- /.container-fluid -->
+  </div>
+  <!-- /#photos -->
+
+  <!-- Start Vacancies section -->
+  <div id="vac">
+    <h3 class="heading">Набираем профессионалов в команду.</h3>
+
+    <div class="row padding">
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img class="card-img-top" src="/img/main/dj.png" alt="">
+          <div class="card-body">
+            <h4>Диджей</h4>
+            <p>Умеешь разжигать огонь в сердцах отдыхающих, тогда тебе к нам!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card text-center">
+          <img class="card-img-top" src="/img/main/shisha.png" alt="">
+          <div class="card-body">
+            <h4>Кальянщик</h4>
+            <p>Твоя страсть оттенку дымящихся вкусов, тогда добро пожаловать!</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- /#vac -->
+
+  <!-- Start Contacts Section -->
+  <div id="contacts">
+
+    <div class="container-fluid footer">
+      <div class="row">
+
+        <div class="col-md-6 text-center">
+          <img src="/img/logo.png" alt="">
+          <h6>ул. Карла Маркса, 29-Б/1</h6>
+          <h6>Воскр-Чт: 18:00-02:00</h6>
+          <h6>Пт-Сб: 18:00-4:00</h6>
+          <h6>Reserve/info: 48-000-8</h6>
+
+        </div>
+
+        <div class="col-md-6">
+          <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af5bafd7c5c0d4194f5bff3a1ab6a26802cb23737142beb6d065a59db550682d1&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true">
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /#contacts -->
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

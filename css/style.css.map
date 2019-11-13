@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": ";AAAA,8BAA8B;ACA9B,AAAA,CAAC,CAAC;EACA,UAAU,EAAE,UAAU;CAAG;;AAE3B,AAAA,cAAc,CAAC;EACb,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,KAAK;EACjB,UAAU,EAAE,8BAA8B;EAC1C,uBAAuB,EAAE,KAAK;EAC9B,oBAAoB,EAAE,KAAK;EAC3B,kBAAkB,EAAE,KAAK;EACzB,eAAe,EAAE,KAAK;CAAG",
+    "sources": [
+        "../style.sass",
+        "../interface.sass"
+    ],
+    "names": [],
+    "file": "style.css"
+}
