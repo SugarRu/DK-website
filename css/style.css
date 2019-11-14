@@ -18,10 +18,13 @@
 body,html {
   font-family: 'GOST type A Regular', sans-serif;
   margin: 0;
-  padding: 0;
-  
-  
+  padding: 0;  
 }
+
+
+
+
+/* - - - - - - - - - - Main section - - - - - - - - - - - */
 .container {
   max-width: 1280px;
   margin-left: auto;
@@ -30,7 +33,7 @@ body,html {
 #main {
   width: 100%;  
   background-image: url('/img/main/landing6.png');
-  background-repeat: no-repeat; /* уберет повторение и прижмет картинку к левой части в полное её размере */
+  background-repeat: no-repeat; /* уберет повторение и прижмет картинку к левой части в полном её размере */
   background-size: cover; /* растянуть картинку на всю ширину */
   color: rgb(255, 255, 255);
 }
@@ -48,7 +51,7 @@ body,html {
   left: 50%;
   margin-left: -18px;
 }
-img {
+#main > img {
   max-width: 100%; /* зачем это прописывается? (чтобы не выходили за блоки) узнать */
 }
 
@@ -298,210 +301,348 @@ ul  {
   justify-content: center;
 }
 
+/* - - - - - - - - - - Main section end - - - - - - - - - - - */
+
+
+
+
+
+
+/* - - - - - - - - - - Parallax - - - - - - - - - - - */
+#page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.textos {
+  width: 800px;
+  z-index: 1;
+  color: red;
+  position: relative;
+  top: 60%;
+  left: 0%;
+  font-size: 50px;
+  
+}
+
+.dk {
+  margin-top: -600px;
+  color: blue;
+  z-index: 35;
+  position: absolute;
+  width: 80px;
+  top: 100%;
+  left: 10%;
+  font-size: 50px;
+}
+
+.dks {
+  top: 10%;
+  color: blue;
+  z-index: 35;
+  position: absolute;
+  width: 50vh;
+  left: 75%;  
+  font-size: 50px;
+  margin-left: 250px;
+  padding-right: 600px;
+ 
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  position: absolute; 
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+.before,
+.after {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* ? что это */
+  overflow: hidden; /* ? что это */
+}
+
+.content-image {
+  height: 100%;
+}
+
+.after {
+  width: 125px;
+  z-index: 1;
+}
+.before {
+  z-index: -1;
+}
+
+.scroller {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 100px;
+  top: 10%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.9;
+  pointer-events: auto;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.scroller:hover {
+  opacity: 1;
+}
+
+.scrolling {
+  pointer-events: none;
+  opacity: 1;
+  z-index: 1;
+}
+
+.scroller__thumb {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+}
+
+.scroller:before,
+.scroller:after {
+  content: " ";
+  display: block;
+  width: 7px;
+  height: 9999px;
+  position: absolute;
+  left: 50%;
+  margin-left: -3.5px;
+  z-index: 30;
+  transition: 0.1s;
+}
+
+.scroller:before {
+  top: 100%;
+}
+
+.scroller:after {
+  bottom: 100%;
+}
+
+.scroller {
+  /* border: 5px solid #fff; */
+  margin-left: 5px;  
+}
+.scroller > img {
+  min-width: 100px;
+  max-height: 150px;
+}
+
+.scroller:before,
+.scroller:after {
+ /*  background: #fff; */
+}
+/* - - - - - - - - - - Parallax end - - - - - - - - - - - */
+
+
 
 
 /* ---------------------------about section------------------------------------------------*/
-
+  
 .container-fluid{
- display: flex; 
- position: relative;
-}
-.about__description{
-  width: 50vw;
-  height: 50vw;
-  display: flex;
-  justify-content: center;
-  text-align: justify;
-  padding: 150px;
-  background: rgb(24, 9, 0);
-  
-}
-.about__wrap {
+  display: flex; 
   position: relative;
-  z-index: 3;
-  margin-top: 15px;    
-}
-.about__title {
-  color: rgb(0, 0, 0);
-  font-size: 50px;
-  letter-spacing: 50px;
-  
-}
-.dk-line > h2 {
-  z-index: 5;
-  
-}
-.about-text__main  {
-  margin-top: 120px;
-  font-size: 25px;
-  letter-spacing: 2px;  
-	background: linear-gradient(180deg, #b38282 0%, #b675a6 100%);
-	-webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-transform: uppercase;
-  line-height: 40px;  	
-}
-
-
-.about-text__sub{
-  text-indent: 380px;
-  margin-top: 50px;
-  font-size: 25px;
-  letter-spacing: 2px;  
-  
-  text-transform: uppercase;
-  line-height: 40px;  	
-}
-/* -------------------------градиент -------------------- */
-.linear-wipe {  
-  background: -webkit-linear-gradient(left, rgb(128, 115, 161), rgb(199, 153, 154), rgb(87, 74, 67), #b86081, rgb(129, 97, 209));
-  background: linear-gradient(left, rgb(128, 115, 161), rgb(199, 153, 154), rgb(87, 74, 67), #b86081, rgb(129, 97, 209));
-  background-size: 3200px 200px;
-  color: transparent;
-  -webkit-background-clip: text;
-  -webkit-animation: animate-logo;
-  -webkit-animation-delay: 0;
-  -webkit-animation-duration: 7s;
-  -webkit-animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-fill-mode: forwards;
-  transition: font-size 500ms ease-in-out;
-}
-
- @-webkit-keyframes animate-logo {
-  0% {
-  background-position: 0 3200px;
-  }
-  100% {
-  background-position: 3200px 0;
-  }
-}
-/* -------------------------конец градиента-------------------- */
-
-
-
-/* текст вылазит из контейнера yf мобильной версии */
-
-
-.about__picture{
-  background-image: url('../img/main/about2.png');
-  -webkit-background-size: contain;
-  background-size: contain;
-  width: 50vw;
-  height: 50vw;
-}
-
-
-
-/* ----------------------dk line------------------- */
-.dk-line:before{
-  content: ' ';
-  position: absolute;
-  width: 1200px;
-  height: 85px;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
-  background: rgb(216, 171, 133);
-  z-index: -1;
-  transition: 0.3s;
-  margin-left: -15px;
-}
-.dk-line:after{
-  content: ' ';
-  position: absolute;
-  width: 1050px;
-  height: 89px;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
-  background: rgb(134, 69, 15);
-  z-index: -1;
-  transition: 0.3s;
-  margin-top: -85px;
-  margin-left: -150px;
-
-}
-.dk-line:hover:before {
-  width: 1000px;
-  margin-left: -235px;
-  background: rgb(233, 73, 10);
-}
-.dk-line:hover:after {
-  width:  200%;
-  margin-left: -10px;
-  background: rgb(159, 10, 189);
-}
-
-/*  ----------------------dk line------------------- */
-
-/* ---------- swiper ---------- */
-.swiper-pagination .swiper-pagination-bullet{
-  background: yellow;
-  width: 15px;
-  height: 15px;
-  border-radius: 0px;
-  opacity: 1;
-}
-.swiper-pagination-bullet-active {
-  background: rgb(30, 182, 55) !important;
-}
-/* ---------- swiper end ---------- */
-
-/* ----------------------square------------------- */
-.square:before {
-  content: ' ';
-  position: absolute;
-  width: 350px;
-  height: 350px;
-  border-radius: 350px;
-  border: 5px solid #E8c300;
-  box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
-  background: none;
-  top: 50%;
-  left: 30%;
-  
-  transition: 0.4s;
-  
-}
-.square:hover:before {
-  top: 0; 
-  margin-top: 0;  
-  width: 100%;
-  height: 100%;
-  border: 5px solid #E8c300;
-}
-
-.square__right:before {  
-  right: -15px;
-}
-.square__right:hover:before {
-  right: 0; /* возможно надо будет поставить auto чтобы не было белых засветов */
-}
-/*  ----------------------square end------------------- */
-
-
-/*  ----------------------events section------------------- */
-.events__wrap {
-
-  
-  
-}
-
-/*  ----------------------events end------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ }
+ .about__description{
+   width: 50vw;
+   height: 50vw;
+   display: flex;
+   justify-content: center;
+   text-align: justify;
+   padding: 150px;
+   background: rgb(24, 9, 0);
+   
+ }
+ .about__wrap {
+   position: relative;
+   z-index: 3;
+   margin-top: 15px;    
+ }
+ .about__title {
+   color: rgb(0, 0, 0);
+   font-size: 50px;
+   letter-spacing: 50px;
+   
+ }
+ .dk-line > h2 {
+   z-index: 5;
+   
+ }
+ .about-text__main  {
+   margin-top: 120px;
+   font-size: 25px;
+   letter-spacing: 2px;  
+   background: linear-gradient(180deg, #b38282 0%, #b675a6 100%);
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   text-transform: uppercase;
+   line-height: 40px;  	
+ }
+ 
+ 
+ .about-text__sub{
+   text-indent: 380px;
+   margin-top: 50px;
+   font-size: 25px;
+   letter-spacing: 2px;  
+   
+   text-transform: uppercase;
+   line-height: 40px;  	
+ }
+ /* -------------------------градиент -------------------- */
+ .linear-wipe {  
+   background: -webkit-linear-gradient(left, rgb(128, 115, 161), rgb(199, 153, 154), rgb(87, 74, 67), #b86081, rgb(129, 97, 209));
+   background: linear-gradient(left, rgb(128, 115, 161), rgb(199, 153, 154), rgb(87, 74, 67), #b86081, rgb(129, 97, 209));
+   background-size: 3200px 200px;
+   color: transparent;
+   -webkit-background-clip: text;
+   -webkit-animation: animate-logo;
+   -webkit-animation-delay: 0;
+   -webkit-animation-duration: 7s;
+   -webkit-animation-timing-function: linear;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-fill-mode: forwards;
+   transition: font-size 500ms ease-in-out;
+ }
+ 
+  @-webkit-keyframes animate-logo {
+   0% {
+   background-position: 0 3200px;
+   }
+   100% {
+   background-position: 3200px 0;
+   }
+ }
+ /* -------------------------конец градиента-------------------- */
+ 
+ 
+ 
+ /* текст вылазит из контейнера yf мобильной версии */
+ 
+ 
+ .about__picture{
+   background-image: url('../img/main/about2.png');
+   -webkit-background-size: contain;
+   background-size: contain;
+   width: 50vw;
+   height: 50vw;
+ }
+ 
+ 
+ 
+ /* ----------------------dk line------------------- */
+ .dk-line:before{
+   content: ' ';
+   position: absolute;
+   width: 1200px;
+   height: 85px;
+   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+   background: rgb(216, 171, 133);
+   z-index: -1;
+   transition: 0.3s;
+   margin-left: -15px;
+ }
+ .dk-line:after{
+   content: ' ';
+   position: absolute;
+   width: 1050px;
+   height: 89px;
+   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+   background: rgb(134, 69, 15);
+   z-index: -1;
+   transition: 0.3s;
+   margin-top: -85px;
+   margin-left: -150px;
+ 
+ }
+ .dk-line:hover:before {
+   width: 1000px;
+   margin-left: -235px;
+   background: rgb(233, 73, 10);
+ }
+ .dk-line:hover:after {
+   width:  200%;
+   margin-left: -10px;
+   background: rgb(159, 10, 189);
+ }
+ 
+ /*  ----------------------dk line------------------- */
+ 
+ /* ---------- swiper ---------- */
+ .swiper-pagination .swiper-pagination-bullet{
+   background: yellow;
+   width: 15px;
+   height: 15px;
+   border-radius: 0px;
+   opacity: 1;
+ }
+ .swiper-pagination-bullet-active {
+   background: rgb(30, 182, 55) !important;
+ }
+ /* ---------- swiper end ---------- */
+ 
+ /* ----------------------square------------------- */
+ .square:before {
+   content: ' ';
+   position: absolute;
+   width: 350px;
+   height: 350px;
+   border-radius: 350px;
+   border: 5px solid #E8c300;
+   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.5);
+   background: none;
+   top: 50%;
+   left: 30%;
+   
+   transition: 0.4s;
+   
+ }
+ .square:hover:before {
+   top: 0; 
+   margin-top: 0;  
+   width: 100%;
+   height: 100%;
+   border: 5px solid #E8c300;
+ }
+ 
+ .square__right:before {  
+   right: -15px;
+ }
+ .square__right:hover:before {
+   right: 0; /* возможно надо будет поставить auto чтобы не было белых засветов */
+ }
+ /*  ----------------------square end------------------- */
+ 
+ 
+ /*  ----------------------events section------------------- */
+ .events__wrap {
+ 
+   
+   
+ }
+ 
+ /*  ----------------------events end------------------- */
+ 
+ 
+ 
+ 
+ 
+ 
